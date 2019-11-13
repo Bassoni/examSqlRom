@@ -1,59 +1,24 @@
 creation d'une Table contenant la totalité du fichier csv afin d'importer correctement chaque données affin d'inserer ses doner plus tard dans d'autres tables
 
-/*
-CREATE TABLE `latrine`.`eqpmtLatrine1All` (
-  `IdEqpLat1` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `LibState` VARCHAR(75) NOT NULL,
-  `LibRurUrb` VARCHAR(75) NOT NULL,
-  `ValPitLat` INT UNSIGNED NOT NULL,
-  `ValWatClo` INT UNSIGNED NOT NULL,
-  `ValOthLat` INT UNSIGNED NOT NULL,
-  `ValNoLat` INT UNSIGNED NOT NULL,  
-  PRIMARY KEY (`IdEqpLat1`))
-ENGINE = InnoDB ;
-*/
+
 
 creation des Tables contenant chacune une colonne de la table 'eqpmtLatrine1All'  afin de séparer chaque données proprement
 
 dans cette premiere table `State` je vais découper la chaine de caractere de 'eqpmtLatrine1All.LibState'  en deux colones afin d'avoir une valeur numérique correspondante a chaque états, pour pouvoir trier par la suite avec la valeur numérique si besoins
 
-/*
-CREATE TABLE `latrine`.`State` (
-  `IdState` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `LibState` VARCHAR(75) NOT NULL,
-  `ValState` INT UNSIGNED NOT NULL,  
-  PRIMARY KEY (`IdState`))
-ENGINE = InnoDB ;
 
-CREATE TABLE `latrine`.`RuralUrban` (
-  `IdRurUrb` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `LibRurUrb` VARCHAR(75) NOT NULL,
-  PRIMARY KEY (`IdRurUrb`))
-ENGINE = InnoDB ;
 
-CREATE TABLE `latrine`.`PitLatrine` (
-  `IdPitLat` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `ValPitLat` INT UNSIGNED NOT NULL,
-  PRIMARY KEY (`IdPitLat`))
-ENGINE = InnoDB ;
 
-CREATE TABLE `latrine`.`WaterCloset` (
-  `IdWatClo` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `ValWatClo` INT UNSIGNED NOT NULL,
-  PRIMARY KEY (`IdWatClo`))
-ENGINE = InnoDB ;
+/* ! ! ! ! Correction d'erreur flagrante  ! ! ! " oubli du second csv " modification apporté sur la table 'eqpmtLatrine1All' : ajout des colones suivante
+("Mud","Wood,Bamboo","Brick","Stone","Cement","Mosaic,Floortiles","Anyothermaterial") */
 
-CREATE TABLE `latrine`.`OtherLatrine` (
- `IdOthLat` INT UNSIGNED NOT NULL AUTO_INCREMENT,
- `ValOthLat` INT UNSIGNED NOT NULL,
-  PRIMARY KEY (`IdOthLat`))
-ENGINE = InnoDB ;
 
-CREATE TABLE `latrine`.`NoLatrine` (
-  `IdNoLat` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `ValNoLat` INT UNSIGNED NOT NULL,
-  PRIMARY KEY (`IdNoLat`))
-ENGINE = InnoDB ;
+/* !! Correctifs apportés !! 
+Elements rajouté/modifier dans la table 'eqpmtLatrine1All'  
+ainsi que la création des deux tables : TypeOfLatrine et MaterialOfLatrine qui 
+et supréssion des ancienne tables  :PitLatrine, WaterCloset, OtherLatrine, NoLatrine .
 */
+
+
 
 apres avoir creer les tables principales je vais creer des tables intermediaire affin de pouvoir faire des jonctions entre les tables
