@@ -1,0 +1,53 @@
+/*
+CREATE TABLE `latrine`.`eqpmtLatrine1All` (
+  `IdEqpLat1` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `LibState` VARCHAR(75) NOT NULL,
+  `LibRurUrb` VARCHAR(75) NOT NULL,
+  `ValPitLat` INT UNSIGNED NOT NULL,
+  `ValWatClo` INT UNSIGNED NOT NULL,
+  `ValOthLat` INT UNSIGNED NOT NULL,
+  `ValNoLat` INT UNSIGNED NOT NULL,  
+  PRIMARY KEY (`IdEqpLat1`))
+ENGINE = InnoDB ;
+*/
+
+
+/*
+CREATE TABLE `latrine`.`State` (
+  `IdState` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `LibState` VARCHAR(75) NOT NULL,
+  `ValState` INT UNSIGNED NOT NULL,  
+  PRIMARY KEY (`IdState`))
+ENGINE = InnoDB ;
+
+CREATE TABLE `latrine`.`RuralUrban` (
+  `IdRurUrb` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `LibRurUrb` VARCHAR(75) NOT NULL,
+  PRIMARY KEY (`IdRurUrb`))
+ENGINE = InnoDB ;
+
+CREATE TABLE `latrine`.`PitLatrine` (
+  `IdPitLat` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `ValPitLat` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`IdPitLat`))
+ENGINE = InnoDB ;
+
+CREATE TABLE `latrine`.`WaterCloset` (
+  `IdWatClo` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `ValWatClo` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`IdWatClo`))
+ENGINE = InnoDB ;
+
+CREATE TABLE `latrine`.`OtherLatrine` (
+ `IdOthLat` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+ `ValOthLat` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`IdOthLat`))
+ENGINE = InnoDB ;
+
+
+CREATE TABLE `latrine`.`NoLatrine` (
+  `IdNoLat` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `ValNoLat` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`IdNoLat`))
+ENGINE = InnoDB ;
+*/
