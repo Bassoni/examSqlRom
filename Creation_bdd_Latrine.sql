@@ -1,7 +1,6 @@
-CREATE DATABASE laterine
+CREATE DATABASE latrine
 CHARACTER SET utf8
 COLLATE utf8_general_ci;
-
 
 CREATE USER 'latrine'@'localhost' IDENTIFIED BY 'latrine';
 
@@ -14,7 +13,9 @@ WHERE User ='latrine';
 
 
 GRANT SELECT, INSERT, UPDATE, DELETE 
-ON laterine.*
+ON latrine.*
 TO 'latrine'@'localhost';
 
 FLUSH PRIVILEGES;
+
+
